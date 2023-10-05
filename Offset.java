@@ -7,18 +7,19 @@ import java.util.Scanner;
 public class Offset {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the message: ");
-		String name1=sc.nextLine();
-		System.out.println("Enter offset value: ");
-		int offset=sc.nextInt();
-		List<String> code=encrypt1(name1,offset);
-		System.out.println("Encrypted code:"+code);
-		List<String> mcode=code;
-		String k[]=mcode.toArray(new String[mcode.size()]);
-		for(String str : k)
-		{
-			System.out.println("Decrypted message is:"+decrypt1(str,offset));
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the message: ");
+			String name1=sc.nextLine();
+			System.out.println("Enter offset value: ");
+			int offset=sc.nextInt();
+			List<String> code=encrypt1(name1,offset);
+			System.out.println("Encrypted code:"+code);
+			List<String> mcode=code;
+			String k[]=mcode.toArray(new String[mcode.size()]);
+			for(String str : k)
+			{
+				System.out.println("Decrypted message is:"+decrypt1(str,offset));
+			}
 		}
 	}
 	public static List<String> encrypt1(String word1, int off1)
