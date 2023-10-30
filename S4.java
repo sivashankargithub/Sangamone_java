@@ -38,7 +38,7 @@ public class S4 {
 		numbers.add(80);
 		numbers.add(90);
 		
-		inwords.add("zero");
+		inwords.add("");
 		inwords.add("one");
 		inwords.add("two");
 		inwords.add("three");
@@ -71,25 +71,17 @@ public class S4 {
 		String output=inwords.get(pos);
 		System.out.print(output);
 		System.out.print(" ");
-
 	}
-	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
 		Scanner sc1=new Scanner(System.in);
 		System.out.println("Enter the number between 21 to 99");
 		int num1=sc1.nextInt();
-		
 		double temp=0.0;
 		temp=num1/10.0;
-		System.out.println(temp);
 		int part1=((int)temp)*10;
 		int part2=num1-part1;
-		System.out.println(part1+" "+part2);
-		
 		convert(part1);
 		convert(part2);
 		sc1.close();
 	}
-
 }
