@@ -70,7 +70,7 @@ public class S4 {
 		int pos=numbers.indexOf(num1);
 		String output=inwords.get(pos);
 		System.out.print(output);
-			System.out.print(" ");
+		System.out.print(" ");
 
 	}
 	
