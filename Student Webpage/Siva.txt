@@ -1,0 +1,5 @@
+Maths:Sivashankar,Chandu,Gopi,Murali,Rajesh
+Commerce:Shivakumar,Chran,Narayana
+CS:Ram,Charan,Prajwal,Ramachandra,Sharan
+Biology:Shivaraju,Arun,Hemanth,Mahesh
+ME:Sudarshan,Suhas,Gopal
