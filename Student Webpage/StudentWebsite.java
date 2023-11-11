@@ -1,5 +1,3 @@
-package com.sangamone;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,8 +6,8 @@ import java.util.List;
 import java.util.Scanner;
 
 class StudentWebsite{
-    public static void main(String[] args) throws IOException{
-        File f1=new File("StudentWebsite.txt");
+    public static void webpage(String fname) throws IOException{
+        File f1=new File(fname);
         FileWriter fw1;
         List<String> subjects=new ArrayList<>();
         List<String> names;
@@ -60,5 +58,9 @@ class StudentWebsite{
             }
         }
         System.out.println("Successfully web pages created");
+    }
+    public static void main(String[] args) throws IOException{
+        webpage("StudentWebsite.txt");
+         webpage("Siva.txt");
     }
 }
