@@ -1,0 +1,5 @@
+CS:Nishita,Yukta,Navya,Katyayini,Krishna
+EC:Dhanush,Shreya,Sharan
+AI:Nidhi,Pradyumna,Ramachandra
+DS:Rakshita,Ramyashree,Anusha
+ME:Sudarshan,Suhas
