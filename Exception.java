@@ -1,4 +1,4 @@
-package sangamone_pack;
+package com.sangamone;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -154,7 +154,7 @@ public class Exception {
 			position=position-offset;
 			if(position<0)
 			{
-				position=position+53;
+				position=position+list1.size();
 			}
 			String temp2=list1.get(position);
 			result2=result2+temp2;
