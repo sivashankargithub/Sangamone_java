@@ -1,0 +1,8 @@
+Tejashwini,F
+Yuktha,Female
+Lalu,Male
+Male,Parashuram
+F,Madeeha
+Ananya,-1
+Kathyayani,1,2
+Rajath,m
