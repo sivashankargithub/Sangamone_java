@@ -17,7 +17,6 @@ class RandNum{
 		set1.addAll(list1);
 		list1.clear();
 		list1.addAll(set1);
-		System.out.println(list1);
 		return list1;
 	}
 }
@@ -66,17 +65,17 @@ class Results{
 		for(int i=0;i<10;i++) {
 			System.out.println("What is the Capital of "+questions.get(randList.get(i)));
 			String s1=sc1.nextLine();
-			if(s1.equals(answers.get(randList.get(i)))) {
+			if(s1.equalsIgnoreCase(answers.get(randList.get(i)))) {
 				System.out.println("Correct");
 				marks.add(10);
 			}
 			else {
 				System.out.println("Wrong");
 				marks.add(0);
-				wrques.add(questions.get(i));
-				wrans.add(answers.get(i));
+				wrques.add(questions.get(randList.get(i)));
+				wrans.add(answers.get(randList.get(i)));
 			}
-			totmarks =totmarks+marks.get(i);;
+			totmarks =totmarks+marks.get(i);
 		}
 		System.out.println();
 		System.out.println("You got "+totmarks+" marks");
