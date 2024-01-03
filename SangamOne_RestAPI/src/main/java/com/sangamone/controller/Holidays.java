@@ -58,7 +58,6 @@ public class Holidays {
 		}
 		List<String>list1=new ArrayList<>();
 		List<String>getHoli=new ArrayList<>();
-		List<Integer>m1=new ArrayList<>();
 		List<String>month1=new ArrayList<>();
 		Holidays holiday2=new Holidays();
 		list1=holiday2.holi();
