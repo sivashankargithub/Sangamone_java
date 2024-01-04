@@ -1,7 +1,6 @@
 package com.sangamone.controller;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -50,16 +49,16 @@ public class Holidays2 {
 	public List<String> monthString(@PathVariable String month) throws Exception{
 		List<String>list1=new ArrayList<>();
 		List<String>getHoli=new ArrayList<>();
-		List<String>y1=new ArrayList<>();
+		List<String>m1=new ArrayList<>();
 		Holidays2 holidays2=new Holidays2();
 		list1=holidays2.holiAll();
 		for(int i=0;i<list1.size();i++) {
 			String str=list1.get(i);
 			String[] arr1=str.split("-");
-			y1.add(arr1[1]);
+			m1.add(arr1[1]);
 		}
 		for(int i=0;i<list1.size();i++) {
-			String str1=y1.get(i);
+			String str1=m1.get(i);
 			String str2=str1.substring(0,3);
 			if(month.equalsIgnoreCase(str1)||month.equalsIgnoreCase(str2)) {
 				getHoli.add(list1.get(i));
