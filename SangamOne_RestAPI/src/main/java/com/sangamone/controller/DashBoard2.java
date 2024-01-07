@@ -20,17 +20,17 @@ public class DashBoard2 {
 		return list1;
 	}
 	
-	@GetMapping("getUniv1")
+	@GetMapping("/getUniv1")
 	public ArrayList<String> getUniv1()throws Exception{
 		return loadData("univIndia.txt");
 	}
 	
-	@GetMapping("getUniv2")
+	@GetMapping("/getUniv2")
 	public ArrayList<String> getUniv2()throws Exception{
 		return loadData("univUSA.txt");
 	}
 	
-	@GetMapping("getUniv3")
+	@GetMapping("/getUniv3")
 	public ArrayList<String> getUniv3()throws Exception{
 		return loadData("univUK.txt");
 	}
