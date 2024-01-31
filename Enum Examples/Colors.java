@@ -22,6 +22,6 @@ public enum Colors implements Serializable{
 		Scanner sc1=new Scanner(System.in);
 		System.out.println("Enter color to get code :");
 		String color=sc1.next();
-		System.out.println(Colors.valueOf(color).getCode());
+		System.out.println(Colors.valueOf(color.toUpperCase()).getCode());
 	}
 }
