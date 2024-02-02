@@ -9,7 +9,7 @@ public class SalaryLambda {
 	public static void main(String[] args) {
 		//Finding second highest salary in a team
 		List<Integer>list1=Arrays.asList(25000,29000,32000,60000,50000,1500);
-		List<Integer>list2=list1.stream().sorted((s1,s2) -> s2.compareTo(s1)).collect(Collectors.toList());
+		List<Integer>list2=list1.stream().sorted((s1,s2) -> s2.sum(s1, s2)).collect(Collectors.toList());
 		try {
 			System.out.println(list2.get(1));
 		}

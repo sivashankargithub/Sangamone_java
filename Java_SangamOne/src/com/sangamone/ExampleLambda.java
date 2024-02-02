@@ -7,6 +7,7 @@ public class ExampleLambda {
 
 	public static void main(String[] args) {
 		List<Integer>list1=Arrays.asList(2,55,98,96,54,77,234,654);
+		System.out.println(list1.stream());
 		list1.forEach(num -> {
 			if(num%2==0) {
 				System.out.println("Even Number: "+num);
