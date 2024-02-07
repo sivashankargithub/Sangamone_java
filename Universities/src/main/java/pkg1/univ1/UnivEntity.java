@@ -30,7 +30,4 @@ public class UnivEntity {
 	public void setUniv_name(String univ_name) {
 		this.univ_name = univ_name;
 	}
-	
-	
-
 }
