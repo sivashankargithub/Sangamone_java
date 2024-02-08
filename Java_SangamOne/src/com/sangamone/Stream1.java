@@ -17,7 +17,7 @@ public class Stream1 {
 
 	public static void main(String[] args) {
 		Outer1 o=new Outer1();
-		Outer1.Inner1 oi=new ;
+		System.out.println(o.mo1());
 		
 
 	}
