@@ -19,6 +19,7 @@ public class UnvCon {
 		while(sc1.hasNext()) {
 			list1.add(sc1.nextLine());
 		}
+		sc1.close();
 		return list1;
 	}
 	
