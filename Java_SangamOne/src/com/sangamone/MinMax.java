@@ -19,6 +19,9 @@ public class MinMax {
 		System.out.println("Minimum value : "+min);
 		System.out.println("Maximum Value : "+max);
 		System.out.println(list1);
+		System.out.println(System.getProperty("java.version"));
+		
+		System.out.println(list1.retainAll(list1));
 	}
 
 }

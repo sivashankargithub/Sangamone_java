@@ -15,9 +15,7 @@ public class TestStream1 {
 		System.out.println("1st OutPut Of the Stream Api");
 
 		// Java8 Stream Example 
-		IntStream.iterate(1, i -> i<10, i->i+1)
-		         .filter(i-> i % 2 == 0)
-		         .forEach(result -> System.out.printf("% d",result));
+		IntStream.iterate(1, i -> i<10, i->i+1).forEach(result -> System.out.printf("% d",result));
 
 		System.out.println( );
 		System.out.println("Second OutPut Of the Stream");
@@ -34,7 +32,7 @@ public class TestStream1 {
 		System.out.println( );
 		System.out.println("Character OutPut of the Stream");
 
-		IntStream.iterate('A', i -> i <='Z', i->i+1) // ascii 97
+		IntStream.iterate('A', i -> i <='Z', i->i+1) // ASCII 97
 		            .filter(i -> Character.toUpperCase(i) > 'E')
 		           .forEach(result -> System.out.printf("%c", result));
 
@@ -65,7 +63,8 @@ public class TestStream1 {
 		IntStream.iterate('A', i -> i <= 'Z', i-> i+1)
 		    .map(Character::toLowerCase)
 		    .forEach(result -> System.out.printf("%c", result));
-
+		
+		String[] p= {"O","O"};
 	}
 
 }
