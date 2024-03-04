@@ -53,10 +53,13 @@ public class ApnaLoanCon {
 	@GetMapping("/getLedger/{id1}")
 	public String getLedger1(@PathVariable int id1) throws Exception {
 		ArrayList<String[]>trans1=new ArrayList<>();
+		ArrayList<String>trans_1=new ArrayList<>();
+		ArrayList<String>trans_5=new ArrayList<>();
 		trans1=loadData();
 		String[] names = {"CS","Shashank","Keerthana","Kathyayini","Sivashankar","Lalu","Tejashwini","Navya","Ashika"};
 		String name1="";
 		String name2="";
+		String n1="";
 		int amt1=0;
 		int pos1=0;
 		int pos2=0;
@@ -66,11 +69,16 @@ public class ApnaLoanCon {
 				pos2=Integer.parseInt(trans1.get(i)[1]);
 				amt1=Integer.parseInt(trans1.get(i)[2]);
 			}
+			if((Integer.parseInt(trans1.get(i)[0]))==1) {
+				pos1=Integer.parseInt(trans1.get(i)[1]);
+//				trans_1.add();
+			}
 		}
 		amt1=amt1*-1;
 		name1=names[pos1-1];
 		name2=names[pos2-1];
 		String s1=name1+" has to return Rs. "+amt1+" to "+name2;
+		String s5="CS has borrowed loan from Sivashankar of Rs. 1500";
 		return s1;
 	}	
 	
@@ -96,6 +104,5 @@ public class ApnaLoanCon {
 		name2=names[pos2-1];
 		String s1=name1+" has to return Rs. "+amt1+" to "+name2;
 		return s1;
-		
-	}
+		}
 }
