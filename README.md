@@ -115,44 +115,42 @@ Load “holidays1.csv file and display List of Holidays in Mar 2024 using Postgr
 5. Outline the attributes of the table -id, holidayname, date1, day1
 6. Right Click, Source - Generate Getters and Setters
 7. Right Click Source - Generate Constructor with Fields
-8. Create HolidayRepo2.java interface file extends JpaRepository<HolidayEntity2, Integer>
-9. Create HolidayController2.java class file
+8. Create HolidayRepo3.java interface file extends JpaRepository<HolidayEntity3, Integer>
+9. Create HolidayController3.java class file
 
    @RestController
 10. Within the class
 
     @.Autowired
 
-    HolidayRepo2 hr2;    (reference of repository)
+    HolidayRepo3 hr3;    (reference of repository)
 
     @PostMapping(“/holidays/loadData/{fname}”)
 
     Define a method to load data from file (“holidays1.csv”) and save it to the database using
-11. hr.save(new HolidayEntity2(param1, param2, param3)). Use @PathVariable to pick up the file name from the URL
+11. hr.save(new HolidayEntity3(param1, param2, param3)). Use @PathVariable to pick up the file name from the URL
 
     @GetMapping(“/holidays/2024”)
-12. Define a method to pull data from the MySQL database and display it as a list one below the other using hr.findAll()
+12. Define a method to pull data from the database and display it as a list one below the other using hr.findAll()
 
     @GetMapping(“holidays/2024/{month1}”)
 
     Define a method to pull data only for a specific month of a specific year and display it as a list one below the other using hr2.findByMonth().
 13. The following query may be written in the Repo interface.
 
-@Query(value=”select * from holidays where month(date1)=3”,nativeQuery=true)
+@Query(value="select * from holidays2024 where extract(month from date)=:mon",nativeQuery=true)
 
 14. In resources,in application.properties, add the following lines
 
-    spring.application.name=REST2
-
-    spring.datasource.url:jdbc:mysql://localhost:3306/db1
+    spring.datasource.url:jdbc:postgresql://localhost:5432/db1
 
     spring.datasource.username:root
 
     spring.datasource.password:root
 
-spring.jpa.hibernate.ddl-auto=create
+    spring.jpa.hibernate.ddl-auto=create
 
-15. Open MySQL, create database db1,  use db1.
+15. Open PostgreSQL shell, create database db1,  connect db1 using command \c db1;.
 16. In POSTMAN, create a collection called holidays. Create following requests
 
     POST - http://localhost:8080/holidays/loadfile/holiday1.csv
